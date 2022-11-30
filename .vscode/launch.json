@@ -10,8 +10,28 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Run against example bot",
+            "type": "python",
+            "request": "launch",
+            "program": "bot_runner.py",
+            "console": "integratedTerminal",
             "args": [
-                "example_bot"
+                "${fileBasenameNoExtension}",
+                "example_class_bot"
+            ],
+        },
+        {
+            "name": "Run against dynamite bot",
+            "type": "python",
+            "request": "launch",
+            "program": "bot_runner.py",
+            "console": "integratedTerminal",
+            "args": [
+                "${fileBasenameNoExtension}",
+                "dynamite_bot"
             ],
         }
     ]
